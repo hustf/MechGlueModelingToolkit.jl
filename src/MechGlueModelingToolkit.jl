@@ -1,5 +1,11 @@
 module MechGlueModelingToolkit
+import Unitfu
+import Unitfu: AbstractQuantity
+import ModelingToolkit
+import ModelingToolkit: Num, Symbolic
+import Base
+import Base.*
 
-# Write your package code here.
+Base.:*(x::Union{Num,Symbolic},y::T) where T<: AbstractQuantity = x * y
 
 end
